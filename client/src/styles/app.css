@@ -1,9 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #e7e4f7;
+
   box-sizing: border-box;
 }
 
 .App {
+  background-color: #fff9f9;
+  height: 100vh;
 }
