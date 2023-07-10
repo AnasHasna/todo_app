@@ -19,18 +19,21 @@ function MyCard() {
           borderRadius: "20px",
         }}>
         <div style={{ display: "flex", alignItems: "baseline" }}>
-          <FormCheck
-            type="checkbox"
-            style={{ fontSize: "23px", paddingRight: ".4rem" }}
-          />
-          <h5
+          <div>
+            <FormCheck
+              type="checkbox"
+              style={{ fontSize: "23px", paddingRight: ".4rem" }}
+            />
+          </div>
+          <div
             style={{
               color: "#9B9A9A",
-              fontWeight: "bold",
-              fontSize: "1.25rem",
             }}>
-            Task to do
-          </h5>
+            <h5 style={{ fontWeight: "bold", fontSize: "1.25rem" }}>
+              Task to do
+            </h5>
+            <p style={{ fontSize: "bold" }}>Date</p>
+          </div>
         </div>
         <div>
           <Button variant="danger" size="sm">
