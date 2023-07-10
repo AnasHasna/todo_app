@@ -1,0 +1,21 @@
+.btn-color {
+  background-color: #656ff1;
+  border-color: #656ff1;
+}
+.btn-large {
+  padding: 0.2rem 2rem;
+  font-size: 1rem;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+.stack {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 10%;
+}
