@@ -10,7 +10,6 @@ const Todo = require("../models/todoModel");
 
 const addTodo = asyncHandler(async (req, res) => {
   const { text } = req.body;
-  console.log(text);
   if (!text) {
     res.status(400);
     throw new Error("Please enter todo text");

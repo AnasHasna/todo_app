@@ -12,4 +12,12 @@ const deleteTodo = async ({ id }) => {
   return await axios.delete(`http://localhost:5000/todos/${id}`);
 };
 
-export { fetchTodos, addTodo, deleteTodo };
+const modifyTodo = async ({ id, text }) => {
+  return await axios.patch(`http://localhost:5000/todos/${id}`, { text });
+};
+
+const doneTodo = async ({ id }) => {
+  return await axios.put(`http://localhost:5000/todos/${id}`);
+};
+
+export { fetchTodos, addTodo, deleteTodo, modifyTodo, doneTodo };

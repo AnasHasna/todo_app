@@ -24,9 +24,9 @@ function TodoList() {
     },
   });
 
-  // useEffect(() => {
-  //   refetch();
-  // }, 1000);
+  useEffect(() => {
+    refetch();
+  }, 1000);
   return (
     <div className="main">
       <div className="button">
