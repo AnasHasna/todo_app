@@ -14,7 +14,7 @@ function MyCard(props) {
   const timeDiff = currentTime - createdAtTime;
   const timeDiffInHours = Math.floor(timeDiff / (1000 * 3600));
 
-  const [isDone, setIsDone] = React.useState(false);
+  const [data, setData] = React.useState({});
 
   const { isLoading, mutate } = useMutation(deleteTodo, {
     mutationKey: "deleteTodo",
@@ -34,7 +34,7 @@ function MyCard(props) {
   const mutation = useMutation(doneTodo, {
     mutationKey: "doneTodo",
     onSuccess: (data) => {
-      setIsDone(data.data.done);
+      setData(data.data);
     },
     onError: (error) => {
       console.log(error);
@@ -75,7 +75,7 @@ function MyCard(props) {
                 style={{
                   fontWeight: "bold",
                   fontSize: "1.25rem",
-                  textDecoration: isDone ? "line-through" : "none",
+                  textDecoration: data.done ? "line-through" : "none",
                 }}>
                 {props.todo.text}
               </h5>
